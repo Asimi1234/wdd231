@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student Home Page for WDD 231">
+  <meta name="author" content="Asimi Israel Ayomikun">
+  <title>Home | Asimi Israel Ayomikun</title>
+  <!-- Google Fonts -->
+  
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ 
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <!-- JavaScript Files -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/izyqu.svg" alt="Logo" />
+    <span>IzyAccess</span>
+    <button id="hamburger">☰</button>
+  </header>
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chamber/index.html">Chamber Project</a></li>
+      <li><a href="final/index.html">Final Project</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Home</h1>
+    <div class="main-grid">
+      <section class="about">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate and detail-oriented individual with a strong interest in technology, design, and creative
+          problem-solving. I enjoy working on web projects, building user-friendly interfaces, and learning new tools to
+          enhance my skills. Over time, I’ve developed a solid foundation in coding, data visualization, and digital
+          content creation. I'm always eager to take on new challenges and collaborate with others to bring ideas to
+          life. Outside of work, I love exploring new topics, sharing knowledge, and refining my craft.
+        </p>
+      </section>
+      <section class="photo">
+        <h2>Student Photo</h2>
+        <img src="images/israel_asimi.jpg" alt="Portrait of Israel Asimi">
+      </section>
+    </div>
+    <section class="courses">
+      <h2>Web Certificate Courses</h2>git
+      <div class="filters">
+        <button data-filter="all">All</button>
+        <button data-filter="CSE">CSE</button>
+        <button data-filter="WDD">WDD</button>
+      </div>
+      <div id="courseList"></div>
+      <p>The total credits for course listed above is <span id="creditTotal">0</span></p>
+    </section>
+
+  </main>
+
+  <!-- Social media icons -->
+  <div class="social">
+    <a href="https://github.com/Asimi1234"><img src="images/github_logo.png" alt="GitHub logo"></a>
+    <a href="https://linkedin.com/in/asimiisrael"><img src="images/linkedin_logo.svg" alt="LinkedIn"></a>
+    <a href="#"><img src="images/x_logo.svg" alt="X logo description"></a>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year">2024</span> • Asimi Israel Ayomikun • Lagos, Nigeria</p>
+    <p id="lastModified">Last Modification: 04/18/2024 19:14:45</p>
+  </footer>
+</body>
+
+</html>
