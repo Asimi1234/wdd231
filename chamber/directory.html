@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Directory | Timbuktu Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Directory of member businesses of the Timbuktu Chamber of Commerce."
+    />
+    <meta name="author" content="Israel Asimi" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- OpenGraph / Facebook meta -->
+    <meta property="og:title" content="Timbuktu Chamber Business Directory" />
+    <meta
+      property="og:description"
+      content="Explore the businesses supporting Timbuktu's economy and community."
+    />
+    <meta property="og:image" content="images/chamber-share.png" />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/chamber/directory.html"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">🏢</div>
+        <div class="logo-text">Timbuktu Chamber<br />of Commerce</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="directory.html" class="active">Directory</a>
+        <a href="#">Join</a>
+        <a href="#">Discover</a>
+        <button class="dark-mode-toggle">🌙</button>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <h1 class="page-title">Member Directory</h1>
+
+      <div class="view-toggle">
+        <button id="gridViewBtn">Grid View</button>
+        <button id="listViewBtn">List View</button>
+      </div>
+
+      <div id="directory" class="business-grid"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-contact">
+        <h3>Timbuktu Chamber of Commerce</h3>
+        <div>10 Rue De La Paix</div>
+        <div>Timbuktu, Mali 999</div>
+        <div>info@timbuktucc.org</div>
+        <div>(223) 555-2300</div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://youtube.com" target="_blank" class="social-icon"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank" class="social-icon"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+
+      <div class="footer-credit">
+        <div>WDD231 Class Project</div>
+        <div>Israel Asimi</div>
+        <div>© <span id="currentYear"></span> Timbuktu Chamber of Commerce</div>
+        <p id="lastModified">Last Modification: 04/18/2024 19:14:45</p>
+      </div>
+    </footer>
+
+    <script src="scripts/members.js"></script>
+    <script src="scripts/directory.js"></script>
+  </body>
+</html>

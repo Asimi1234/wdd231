@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Sahara Textiles",
+    "address": "23 Desert Lane, Timbuktu",
+    "phone": "(223) 555-1001",
+    "website": "https://saharatextiles.com",
+    "image": "sahara.png",
+    "membership": 3
+  },
+  {
+    "name": "Niger Tours",
+    "address": "45 River Road, Timbuktu",
+    "phone": "(223) 555-2002",
+    "website": "https://nigertours.ml",
+    "image": "nigertours.png",
+    "membership": 2
+  },
+  {
+    "name": "Timbuktu Market",
+    "address": "89 Market Square, Timbuktu",
+    "phone": "(223) 555-3003",
+    "website": "https://timbuktumarket.ml",
+    "image": "market.png",
+    "membership": 1
+  },
+  {
+    "name": "Mali Coffee Co.",
+    "address": "12 Roast Ave, Timbuktu",
+    "phone": "(223) 555-4004",
+    "website": "https://malicoffee.ml",
+    "image": "coffee.png",
+    "membership": 2
+  },
+  {
+    "name": "Oasis Spa & Wellness",
+    "address": "55 Palm Road, Timbuktu",
+    "phone": "(223) 555-5005",
+    "website": "https://oasisspa.ml",
+    "image": "spa.png",
+    "membership": 3
+  },
+  {
+    "name": "Desert Tech Solutions",
+    "address": "22 Innovation Blvd, Timbuktu",
+    "phone": "(223) 555-6006",
+    "website": "https://deserttech.ml",
+    "image": "tech.png",
+    "membership": 1
+  },
+  {
+    "name": "Sahara Bakers",
+    "address": "3 Olive Street, Timbuktu",
+    "phone": "(223) 555-7007",
+    "website": "https://saharabakers.ml",
+    "image": "bakers.png",
+    "membership": 2
+  }
+]
