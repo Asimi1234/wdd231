@@ -392,6 +392,10 @@ body {
   font-size: 18px;
   transition: background-color 0.3s, transform 0.3s;
 }
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
 
 .social-icon:hover {
   background-color: #333;
@@ -589,6 +593,15 @@ body {
   .social-links {
     justify-content: center;
   }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 /* Tablet Styles */
