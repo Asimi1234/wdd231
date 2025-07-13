@@ -159,68 +159,6 @@ function initializePage() {
     });
 }
 
-const darkModeStyles = `
-    .dark-mode {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
-    }
-    
-    .dark-mode .header {
-        background-color: #2d2d2d;
-        border-bottom-color: #444;
-    }
-    
-    .dark-mode .nav a {
-        color: #e0e0e0;
-    }
-    
-    .dark-mode .nav a:hover,
-    .dark-mode .nav a.active {
-        background-color: #444;
-    }
-    
-    .dark-mode .hero {
-        background: linear-gradient(135deg, #2d2d2d 0%, #3d3d3d 100%);
-        border-color: #444;
-    }
-    
-    .dark-mode .hero-text {
-        color: #ccc;
-    }
-    
-    .dark-mode .content-section {
-        background-color: #2d2d2d;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    
-    .dark-mode .section-content {
-        background-color: #333;
-    }
-    
-    .dark-mode .business-card {
-        background-color: #2d2d2d;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    
-    .dark-mode .footer {
-        background-color: #2d2d2d;
-        border-top-color: #444;
-    }
-    
-    .dark-mode .page-title {
-        color: #e0e0e0;
-    }
-    
-    .dark-mode .weather-temp,
-    .dark-mode .forecast-temp,
-    .dark-mode .business-name {
-        color: #e0e0e0;
-    }
-`;
-
-const styleSheet = document.createElement('style');
-styleSheet.textContent = darkModeStyles;
-document.head.appendChild(styleSheet);
 
 document.addEventListener('DOMContentLoaded', initializePage);
 

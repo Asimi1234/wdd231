@@ -51,3 +51,5 @@ document.getElementById('currentYear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
 loadMembers();
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();

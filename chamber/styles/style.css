@@ -6,10 +6,10 @@
 }
 
 body {
-  font-family: 'Roboto', 'Lora', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  line-height: 1.6;
+ font-family: 'Roboto', sans-serif;
+ background-color: #f5f5f5;
+ color: #333;
+ line-height: 1.6;
 }
 
 /* Header Styles */
@@ -20,6 +20,10 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
+}
+
+h1, h2, h3, .page-title {
+  font-family: 'Lora', serif;
 }
 
 .logo {
@@ -277,7 +281,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
+  display: block;
   gap: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -434,6 +438,64 @@ body {
   flex-direction: column;
   gap: 15px;
 }
+
+ .dark-mode {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .dark-mode .header {
+        background-color: #2d2d2d;
+        border-bottom-color: #444;
+    }
+    
+    .dark-mode .nav a {
+        color: #e0e0e0;
+    }
+    
+    .dark-mode .nav a:hover,
+    .dark-mode .nav a.active {
+        background-color: #444;
+    }
+    
+    .dark-mode .hero {
+        background: linear-gradient(135deg, #2d2d2d 0%, #3d3d3d 100%);
+        border-color: #444;
+    }
+    
+    .dark-mode .hero-text {
+        color: #ccc;
+    }
+    
+    .dark-mode .content-section {
+        background-color: #2d2d2d;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    .dark-mode .section-content {
+        background-color: #333;
+    }
+    
+    .dark-mode .business-card {
+        background-color: #2d2d2d;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    .dark-mode .footer {
+        background-color: #2d2d2d;
+        border-top-color: #444;
+    }
+    
+    .dark-mode .page-title {
+        color: #e0e0e0;
+    }
+    
+    .dark-mode .weather-temp,
+    .dark-mode .forecast-temp,
+    .dark-mode .business-name {
+        color: #e0e0e0;
+    }
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -638,17 +700,12 @@ body {
     font-size: 20px;
   }
 
-  .business-card {
-    display: flex;
-  }
-
   .business-image {
     width: 60px;
     height: 60px;
     font-size: 24px;
   }
   .business-detail-container {
-    flex-direction: row;
     gap: 30px;
     padding: 10px 20px 10px;
   }
