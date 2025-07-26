@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Timbuktu Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="images/chamber_logo.png" alt="Chamber Logo" />
+            </div>
+            <div class="logo-text">Timbuktu Chamber<br />of Commerce</div>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="#">Discover</a>
+            <button class="dark-mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="thank-you-section">
+            <div class="success-icon">
+                <div class="checkmark">✓</div>
+            </div>
+            
+            <h1>Thank You for Your Application!</h1>
+            <p class="thank-you-message">
+                We have received your membership application and appreciate your interest in joining our Chamber of Commerce. 
+                We will review your application and contact you within 3-5 business days.
+            </p>
+
+            <div class="application-summary">
+                <h2>Application Summary</h2>
+                <div class="summary-content">
+                    <div class="info-row">
+                        <span class="label">Name:</span>
+                        <span class="value" id="fullName"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Email:</span>
+                        <span class="value" id="emailValue"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Phone:</span>
+                        <span class="value" id="phoneValue"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Business/Organization:</span>
+                        <span class="value" id="businessValue"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Application Date:</span>
+                        <span class="value" id="timestampValue"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <ol>
+                    <li>Our membership team will review your application</li>
+                    <li>We'll contact you within 3-5 business days</li>
+                    <li>Upon approval, you'll receive membership materials and access information</li>
+                    <li>Welcome to the Chamber of Commerce community!</li>
+                </ol>
+            </div>
+
+            <div class="contact-info">
+                <p>If you have any questions, please contact us at:</p>
+                <p><strong>Email:</strong> membership@chamber.org</p>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+            </div>
+
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+                <a href="join.html" class="btn btn-secondary">Submit Another Application</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contact">
+            <h3>Timbuktu Chamber of Commerce</h3>
+            <div>10 Rue De La Paix</div>
+            <div>Timbuktu, Mali 999</div>
+            <div>info@timbuktucc.org</div>
+            <div>(223) 555-2300</div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://youtube.com" target="_blank" class="social-icon">
+                <img src="images/favicon-32x32.png" alt="YouTube" class="social-img" />
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">
+                <img src="images/apple-touch-icon.png" alt="Twitter" class="social-img" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon">
+                <img src="images/favicon-16x16.png" alt="LinkedIn" class="social-img" />
+            </a>
+        </div>
+
+        <div class="footer-credit">
+            <div>WDD231 Class Project</div>
+            <div>Asimi Israel</div>
+            <div>© 2025 Timbuktu Chamber of Commerce</div>
+            <p id="lastModified">Last Modification: 04/18/2024 19:14:45</p>
+        </div>
+    </footer>
+
+    <script src="scripts/thankyou.js"></script>
+</body>
+</html>

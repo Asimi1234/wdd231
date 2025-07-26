@@ -239,7 +239,7 @@ h1, h2, h3, .page-title {
 
 .weather-desc {
   font-size: 14px;
-  color: #666;
+  color: #272626;
   margin-bottom: 12px;
   font-weight: 500;
 }
@@ -297,7 +297,7 @@ h1, h2, h3, .page-title {
 .business-image {
   width: 80px;
   height: 80px;
-  background-color: #ddd;
+  background-color: #1e1a1a;
   border: 1px solid #ccc;
   display: flex;
   align-items: center;
@@ -329,7 +329,7 @@ h1, h2, h3, .page-title {
 
 .business-tagline {
   font-size: 12px;
-  color: #666;
+  color: #212020;
   margin-bottom: 12px;
   font-style: italic;
   text-align: center;
@@ -338,7 +338,7 @@ h1, h2, h3, .page-title {
 .business-details {
   font-size: 12px;
   line-height: 1.5;
-  color: #555;
+  color: #302d2d;
 }
 
 .business-details div {
@@ -408,7 +408,7 @@ h1, h2, h3, .page-title {
 
 .footer-credit {
   font-size: 12px;
-  color: #666;
+  color: #282626;
   text-align: right;
   line-height: 1.4;
 }
@@ -421,7 +421,7 @@ h1, h2, h3, .page-title {
 
 .view-toggle button {
   padding: 8px 12px;
-  background-color: #666;
+  background-color: #212020;
   color: white;
   border: none;
   border-radius: 4px;
@@ -599,7 +599,7 @@ h1, h2, h3, .page-title {
     font-size: 12px;
     text-align: center;
     font-style: italic;
-    color: #666;
+    color: #262424;
   }
 
   .business-divider {
