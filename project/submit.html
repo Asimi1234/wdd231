@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IzyQu QuoteGen - Submit Your Quote</title>
+    <link rel="stylesheet" href="styles/desktop.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/mobile.css" media="(max-width: 767px)">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png" alt="IzyQu QuoteGen Logo" class="logo">
+            <h1>IzyQu QuoteGen</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quotes.html">Browse Quotes</a></li>
+                <li><a href="submit.html" class="active">Submit Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="submit-main">
+        <section class="submit-form-section">
+            <h2>Share Your Wisdom</h2>
+            <p>Have a quote that inspires you? Share it with the IzyQu QuoteGen community! We review all submissions to ensure quality and relevance.</p>
+
+            <form id="quote-submission-form">
+                <div class="form-group">
+                    <label for="quote-text-input">Quote Text:</label>
+                    <textarea id="quote-text-input" name="quoteText" rows="5" required placeholder="Enter the full quote here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="quote-author-input">Author (if known):</label>
+                    <input type="text" id="quote-author-input" name="quoteAuthor" placeholder="e.g., Albert Einstein">
+                </div>
+
+                <div class="form-group">
+                    <label for="your-name-input">Your Name (optional):</label>
+                    <input type="text" id="your-name-input" name="yourName" placeholder="Your name for attribution (optional)">
+                </div>
+
+                <div class="form-group">
+                    <label for="quote-category-input">Category:</label>
+                    <select id="quote-category-input" name="quoteCategory" required>
+                        <option value="">-- Select a Category --</option>
+                        <option value="Inspiration">Inspiration</option>
+                        <option value="Motivation">Motivation</option>
+                        <option value="Wisdom">Wisdom</option>
+                        <option value="Life">Life</option>
+                        <option value="Success">Success</option>
+                        <option value="Creativity">Creativity</option>
+                        <option value="Happiness">Happiness</option>
+                        <option value="Courage">Courage</option>
+                        <option value="Knowledge">Knowledge</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Submit Quote</button>
+                <p id="form-message" class="hidden"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Israel Ayomikun Asimi, Nigeria</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

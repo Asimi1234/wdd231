@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IzyQu QuoteGen - Daily Inspiration</title>
+    <link rel="stylesheet" href="styles/desktop.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/mobile.css" media="(max-width: 767px)">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/quotesData.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png" alt="IzyQu QuoteGen Logo" class="logo">
+            <h1>IzyQu QuoteGen</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="quotes.html">Browse Quotes</a></li>
+                <li><a href="submit.html">Submit Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <section class="quote-of-the-day">
+            <h2>Your Daily Dose of Inspiration</h2>
+            <div class="quote-card">
+                <blockquote id="quote-text">"The only way to do great work is to love what you do."</blockquote>
+                <p class="quote-author" id="quote-author">- Steve Jobs</p>
+                <div class="quote-actions">
+                    <button id="new-quote-btn" class="btn">New Quote</button>
+                    <button id="favorite-quote-btn" class="btn favorite-btn" data-quote-index="-1">
+                        <span class="heart-icon">&#9825;</span> Favorite
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="site-purpose-section">
+            <h2>Our Purpose</h2>
+            <p>IzyQu QuoteGen is your go-to source for daily inspiration and wisdom. We believe in the power of words to uplift, motivate, and bring positivity to your life. Discover profound insights, thought-provoking ideas, and empowering affirmations from influential thinkers, artists, and leaders across the ages.</p>
+            <p>Whether you're looking for a quick burst of motivation, a fresh perspective, or a deep dive into timeless wisdom, our curated collection is here to illuminate your path.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Israel Ayomikun Asimi, Nigeria</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

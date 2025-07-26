@@ -1,0 +1,358 @@
+
+
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdcac6; 
+    color: #333; 
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #2a9d8f; 
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    
+    text-align: left; 
+}
+
+a {
+    color: #e76f51; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+header {
+    background-color: #f7f7f7;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 0.8rem;
+    margin-bottom: 0.8rem; 
+}
+
+header .logo {
+    height: 40px; 
+    width: auto;
+}
+
+header h1 {
+    font-size: 1.8rem; 
+    margin: 0;
+    color: #333;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 0.8rem;
+}
+
+nav li {
+    flex: 1; 
+    text-align: center;
+}
+
+nav a {
+    color: #2a9d8f;
+    font-weight: 700;
+    padding: 0.5rem 0.2rem;
+    display: block;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+nav a.active {
+    color: #e76f51;
+}
+
+
+nav a:hover, nav a.active {
+    text-decoration: none; 
+}
+
+
+
+main {
+    flex: 1;
+    padding: 1rem; 
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
+    padding: 1.5rem; 
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    text-align: center;
+}
+
+
+section p {
+    text-align: left; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%; 
+}
+
+
+
+.home-main .quote-of-the-day {
+    text-align: center;
+}
+
+.quote-card {
+    padding: 1.5rem; 
+}
+
+.quote-card blockquote {
+    font-size: 1.4rem; 
+    text-align: center; 
+}
+
+.quote-card .quote-author {
+    font-size: 1rem;
+    text-align: center; 
+}
+
+.quote-actions {
+    flex-direction: column; 
+    gap: 0.8rem;
+}
+
+.btn {
+    
+    background-color: #e76f51; 
+    color: #fff; 
+    padding: 0.7rem 1.2rem; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    width: 80%; 
+    margin: 0.5rem auto; 
+    display: block; 
+}
+
+.btn:hover {
+    background-color: #d15a42;
+}
+
+.favorite-btn {
+    
+    background-color: #2a9d8f; 
+    justify-content: center; 
+}
+
+.favorite-btn:hover {
+    background-color: #22847a;
+}
+
+.favorite-btn .heart-icon {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.favorite-btn.favorited .heart-icon {
+    
+    color: #e76f51; 
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+
+.browse-controls {
+    text-align: center;
+}
+
+.category-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem; 
+}
+
+.category-filter label {
+    margin-right: 0;
+    font-size: 1rem;
+    text-align: center; 
+    width: 100%; 
+}
+
+.category-filter select {
+    width: 100%;
+    max-width: 250px; 
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    text-align: center; 
+    text-align-last: center; 
+}
+
+.quotes-grid {
+    grid-template-columns: 1fr; 
+    gap: 1rem; 
+}
+
+.quote-item {
+    padding: 1rem; 
+    text-align: center; 
+}
+
+.quote-item blockquote {
+    font-size: 1rem;
+    text-align: center; 
+}
+
+.quote-item .quote-author {
+    font-size: 0.85rem;
+    text-align: center; 
+}
+
+.quote-item .favorite-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    width: auto; 
+    margin: 0.5rem auto 0; 
+}
+
+.no-favorites, .no-quotes-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin: 1rem auto; 
+}
+
+
+.submit-form-section p {
+    text-align: center; 
+    margin-bottom: 1rem;
+}
+
+#quote-submission-form {
+    padding: 1.5rem; 
+    max-width: 320px; 
+    margin: 2rem auto; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+#quote-submission-form .form-group {
+    width: 100%; 
+    margin-bottom: 1rem;
+    text-align: center; 
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: center; 
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%; 
+    max-width: 280px; 
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 1rem;
+    display: block; 
+    margin: 0 auto; 
+    text-align: left; 
+    text-align-last: initial; 
+}
+
+.form-group select {
+    text-align: center; 
+    text-align-last: center; 
+}
+
+
+.submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: auto; 
+    display: block;
+    margin: 1rem auto 0; 
+}
+
+#form-message {
+    text-align: center; 
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+
+
+.references-main section {
+    text-align: center; 
+}
+
+.references-main p {
+    text-align: left; 
+}
+
+.references-main ul {
+    list-style: disc;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px; 
+    max-width: 90%; 
+    text-align: left; 
+}
+
+.references-main li {
+    text-align: left;
+}
+
+
+
+footer {
+    padding: 0.8rem 1rem;
+    text-align: center; 
+}
+
+footer p {
+    font-size: 0.8rem;
+    text-align: center;
+}
