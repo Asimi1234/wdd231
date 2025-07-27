@@ -142,18 +142,21 @@ body {
         border-bottom: none;
     }
 }
-
 .container {
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+    background-color: #f4f4f4;
+}
+.sub-container {
     margin: 2rem auto;
-    padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
 @media (min-width: 768px) {
-    .container {
+    .sub-container {
         grid-template-columns: 2fr 1fr;
     }
 }
