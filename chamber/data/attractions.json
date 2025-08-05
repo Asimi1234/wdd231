@@ -1,0 +1,68 @@
+{
+  "attractions": [
+    {
+      "id": 1,
+      "name": "Great Mosque of Sankore",
+      "address": "Sankore Quarter, Timbuktu, Mali",
+      "description": "The legendary Sankore Mosque and University was one of the world's first universities and a center of Islamic learning. Built in the 15th century, it housed over 25,000 students and 180 schools of Quranic learning.",
+      "image": "images/sankore.jpg",
+      "category": "historical"
+    },
+    {
+      "id": 2,
+      "name": "Djinguereber Mosque",
+      "address": "Central Timbuktu, Mali",
+      "description": "Built around 1327 CE, this iconic mosque is one of the oldest in West Africa and a UNESCO World Heritage site. Its distinctive mud-brick architecture represents the pinnacle of Sudano-Sahelian architectural style.",
+      "image": "images/djinguereber.jpg",
+      "category": "historical"
+    },
+    {
+      "id": 3,
+      "name": "Ahmed Baba Institute",
+      "address": "University of Timbuktu, Mali",
+      "description": "Home to over 700,000 ancient manuscripts covering subjects from astronomy to poetry. This modern institute preserves and digitizes Timbuktu's incredible literary heritage dating back to the 12th century.",
+      "image": "images/ahmed.jpg",
+      "category": "cultural"
+    },
+    {
+      "id": 4,
+      "name": "Timbuktu Manuscripts",
+      "address": "Various Private Libraries, Timbuktu",
+      "description": "Discover the hidden treasure of Africa - hundreds of thousands of ancient manuscripts that prove Timbuktu was a center of learning when Europe was in the Dark Ages. Many are still held by local families.",
+      "image": "images/timbuku-manuscript.jpg",
+      "category": "cultural"
+    },
+    {
+      "id": 5,
+      "name": "Flame of Peace Monument",
+      "address": "Peace Square, Timbuktu, Mali",
+      "description": "This striking monument commemorates the 1996 peace ceremony where over 3,000 weapons were burned to mark the end of the Tuareg rebellion. It stands as a symbol of reconciliation and hope.",
+      "image": "images/flame-of-peace.jpg",
+      "category": "modern"
+    },
+    {
+      "id": 6,
+      "name": "Niger River Port",
+      "address": "Kabara Port, 8km south of Timbuktu",
+      "description": "The historic port of Kabara connects Timbuktu to the Niger River. During flood season, boats arrive laden with goods from across West Africa, continuing a trading tradition that spans over 1,000 years.",
+      "image": "images/niger-port.jpg",
+      "category": "natural"
+    },
+    {
+      "id": 7,
+      "name": "Traditional Salt Mines",
+      "address": "Taghaza Region, Northern Mali",
+      "description": "Visit the ancient salt mines of Taghaza, where salt has been extracted for over 500 years. The famous salt caravans that made Timbuktu wealthy still operate, carrying precious salt across the Sahara.",
+      "image": "images/salt-mine.jpg",
+      "category": "natural"
+    },
+    {
+      "id": 8,
+      "name": "Desert Camel Treks",
+      "address": "Sahara Desert, Timbuktu Region",
+      "description": "Experience the Sahara as traders have for centuries. Join guided camel treks into the golden dunes surrounding Timbuktu, where you can witness stunning sunsets and sleep under countless stars.",
+      "image": "images/desert-trek.jpg",
+      "category": "adventure"
+    }
+  ]
+}

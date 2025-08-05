@@ -496,7 +496,110 @@ h1, h2, h3, .page-title {
         color: #e0e0e0;
     }
 
+/* Visit Message */
+.visit-message {
+  background-color: #fff;
+  color: #333;
+  padding: 15px 20px;
+  margin: 0 0 25px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
 
+.visit-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Discover Grid Layout */
+.discover-grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+/* Discover Cards */
+.discover-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  padding: 20px 20px 15px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.card-figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card-address {
+  font-style: normal;
+  font-size: 14px;
+  color: #666;
+  padding: 15px 20px 10px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.card-description {
+  padding: 0 20px 20px;
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.card-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 0 20px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: flex-start;
+}
+
+.card-button:hover {
+  background-color: #555;
+  transform: translateY(-1px);
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
   .header {
@@ -666,6 +769,31 @@ h1, h2, h3, .page-title {
     }
 }
 
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 card8";
+  }
+  
+  .discover-card:nth-child(8) {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) and (min-width: 769px) {
   .content-grid {
@@ -675,6 +803,27 @@ h1, h2, h3, .page-title {
   .business-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .discover-card:hover .card-image {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.1);
+  }
+  
+  .card-figure::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .discover-card:hover .card-figure::after {
+    opacity: 1;
+  }
+
 }
 
 /* Small Mobile Styles */
@@ -717,4 +866,120 @@ h1, h2, h3, .page-title {
   .footer {
     padding: 15px 10px;
   }
+  .discover-grid {
+    gap: 12px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    padding: 12px 12px 8px;
+  }
+  
+  .card-image {
+    height: 160px;
+  }
+  
+  .card-address {
+    padding: 8px 12px 6px;
+    font-size: 12px;
+  }
+  
+  .card-description {
+    padding: 0 12px 12px;
+    font-size: 12px;
+  }
+  
+  .card-button {
+    margin: 0 12px 12px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .discover-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
+    gap: 15px;
+  }
+  
+  .visit-message {
+    margin: 0 0 20px 0;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    padding: 15px 15px 10px;
+  }
+  
+  .card-image {
+    height: 180px;
+  }
+  
+  .card-address {
+    padding: 10px 15px 8px;
+    font-size: 13px;
+  }
+  
+  .card-description {
+    padding: 0 15px 15px;
+    font-size: 13px;
+  }
+  
+  .card-button {
+    margin: 0 15px 15px;
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  /* No hover effects on mobile */
+  .discover-card:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+/* Dark Mode Styles for Discover Page */
+.dark-mode .visit-message {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.dark-mode .discover-card {
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.dark-mode .discover-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.dark-mode .card-title {
+  color: #e0e0e0;
+}
+
+.dark-mode .card-address {
+  color: #b0b0b0;
+}
+
+.dark-mode .card-description {
+  color: #c0c0c0;
+}
+
+.dark-mode .card-button {
+  background-color: #4d4d4d;
+}
+
+.dark-mode .card-button:hover {
+  background-color: #666;
 }

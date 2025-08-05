@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Directory | Timbuktu Chamber of Commerce</title>
-    <meta name="description" content="Directory of member businesses of the Timbuktu Chamber of Commerce.">
+    <title>Discover Timbuktu | Timbuktu Chamber of Commerce</title>
+    <meta name="description" content="Discover the historic treasures and cultural landmarks of Timbuktu, Mali. Explore our city's rich heritage and attractions.">
     <meta name="author" content="Israel Asimi">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,19 +12,18 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- OpenGraph / Facebook meta -->
-    <meta property="og:title" content="Timbuktu Chamber Business Directory" />
+    <meta property="og:title" content="Discover Timbuktu - Chamber of Commerce" />
     <meta
       property="og:description"
-      content="Explore the businesses supporting Timbuktu's economy and community."
+      content="Explore the historic treasures and cultural landmarks of Timbuktu, Mali."
     />
-    
     <meta
       property="og:image"
       content="images/chamber_logo.png"
     />
     <meta
       property="og:url"
-      content="https://asimi1234.github.io/wdd231/chamber/directory.html"
+      content="https://asimi1234.github.io/wdd231/chamber/discover.html"
     />
   </head>
   <body>
@@ -38,9 +37,9 @@
       </div>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="directory.html" class="active">Directory</a>
+        <a href="directory.html">Directory</a>
         <a href="join.html">Join</a>
-        <a href="discovery.html">Discover</a>
+        <a href="discover.html" class="active">Discover</a>
         <button class="dark-mode-toggle">🌙</button>
       </nav>
       <div class="hamburger">
@@ -51,14 +50,15 @@
     </header>
 
     <main class="main-content">
-      <h1 class="page-title">Member Directory</h1>
+      <h1 class="page-title">Discover Timbuktu</h1>
+      
+      <!-- Visit Message -->
+      <div id="visitMessage" class="visit-message"></div>
 
-      <div class="view-toggle">
-        <button id="gridViewBtn">Grid View</button>
-        <button id="listViewBtn">List View</button>
+      <!-- Discover Grid -->
+      <div id="discoverGrid" class="discover-grid">
+        <!-- Cards will be dynamically loaded here -->
       </div>
-
-      <div id="directory" class="business-grid"></div>
     </main>
 
     <!-- Footer -->
@@ -75,10 +75,10 @@
         <a href="https://youtube.com" target="_blank" class="social-icon" aria-label="Visit our YouTube channel">
           <img src="images/favicon-32x32.png" alt="YouTube" class="social-img" />
         </a>
-        <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Visit our YouTube channel">
+        <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Visit our Twitter page">
           <img src="images/apple-touch-icon.png" alt="Twitter" class="social-img" />
         </a>
-        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="Visit our YouTube channel">
+        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="Visit our LinkedIn page">
           <img
             src="images/favicon-16x16.png"
             alt="LinkedIn"
@@ -95,7 +95,6 @@
       </div>
     </footer>
 
-    <script src="scripts/members.js"></script>
-    <script src="scripts/directory.js"></script>
+    <script src="scripts/discovery.js"></script>
   </body>
 </html>
