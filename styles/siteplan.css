@@ -1,0 +1,126 @@
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #fdfcfb, #f0f9f8);
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Main Page Title */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: #2a9d8f;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Section styling */
+section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #2a9d8f;
+  margin-top: 0;
+  margin-bottom: 12px;
+ 
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #e76f51;
+  margin-bottom: 8px;
+}
+.logo{
+  width:5%;
+  height: auto;
+}
+/* Accent colors */
+.accent {
+  color: #e76f51;
+  font-weight: bold;
+}
+
+.secondary {
+  color: #2a9d8f;
+  font-weight: bold;
+}
+.background{
+  color: #cdcac6;
+  font-weight: bold;
+}
+.text{
+  color: #333;
+  font-weight: bold;
+}
+/* List styling */
+ul {
+  padding-left: 25px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Wireframe images section */
+.wireframe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.wireframe img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Paragraph spacing */
+p {
+  margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e6f7f5;
+  margin-top: 40px;
+  border-top: 2px solid #2a9d8f;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Add hover for links if needed */
+a {
+  color: #e76f51;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
