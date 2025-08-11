@@ -1,0 +1,651 @@
+/* Enhanced mobile.css with modal styles */
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdcac6; 
+    color: #333; 
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #2a9d8f; 
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: left; 
+}
+
+a {
+    color: #e76f51; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #e76f51;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #f7f7f7;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 0.8rem;
+    margin-bottom: 0.8rem; 
+}
+
+header .logo {
+    height: 40px; 
+    width: auto;
+}
+
+header h1 {
+    font-size: 1.8rem; 
+    margin: 0;
+    color: #333;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 0.8rem;
+}
+
+nav li {
+    flex: 1; 
+    text-align: center;
+}
+
+nav a {
+    color: #2a9d8f;
+    font-weight: 700;
+    padding: 0.5rem 0.2rem;
+    display: block;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+nav a.active {
+    color: #e76f51;
+}
+
+nav a:hover, nav a.active {
+    text-decoration: none; 
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 1rem; 
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
+    padding: 1.5rem; 
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+section p {
+    text-align: left; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%; 
+}
+
+/* Home Page Styles */
+.home-main .quote-of-the-day {
+    text-align: center;
+}
+
+.quote-card {
+    padding: 1.5rem; 
+}
+
+.quote-card blockquote {
+    font-size: 1.4rem; 
+    text-align: center; 
+}
+
+.quote-card .quote-author {
+    font-size: 1rem;
+    text-align: center; 
+}
+
+.quote-actions {
+    flex-direction: column; 
+    gap: 0.8rem;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #e76f51; 
+    color: #fff; 
+    padding: 0.7rem 1.2rem; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    width: 80%; 
+    margin: 0.5rem auto; 
+    display: block; 
+}
+
+.btn:hover {
+    background-color: #d15a42;
+}
+
+.btn:focus {
+    outline: 2px solid #2a9d8f;
+    outline-offset: 2px;
+}
+
+.favorite-btn {
+    background-color: #2a9d8f; 
+    justify-content: center; 
+}
+
+.favorite-btn:hover {
+    background-color: #22847a;
+}
+
+.favorite-btn .heart-icon {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.favorite-btn.favorited .heart-icon {
+    color: #e76f51; 
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.details-btn {
+    background-color: #666;
+    width: 60%;
+}
+
+.details-btn:hover {
+    background-color: #555;
+}
+
+/* Browse Page Styles */
+.browse-controls {
+    text-align: center;
+}
+
+.category-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem; 
+}
+
+.category-filter label {
+    margin-right: 0;
+    font-size: 1rem;
+    text-align: center; 
+    width: 100%; 
+}
+
+.category-filter select {
+    width: 100%;
+    max-width: 250px; 
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    text-align: center; 
+    text-align-last: center; 
+}
+
+.quotes-grid {
+    grid-template-columns: 1fr; 
+    gap: 1rem; 
+}
+
+.quote-item {
+    padding: 1rem; 
+    text-align: center; 
+}
+
+.quote-item blockquote {
+    font-size: 1rem;
+    text-align: center; 
+}
+
+.quote-item .quote-author {
+    font-size: 0.85rem;
+    text-align: center; 
+}
+
+.quote-item .quote-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.quote-item .favorite-btn,
+.quote-item .details-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    width: 70%; 
+    margin: 0.25rem auto; 
+}
+
+.no-favorites, .no-quotes-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin: 1rem auto; 
+}
+
+/* Submit Page Styles */
+.submit-form-section p {
+    text-align: center; 
+    margin-bottom: 1rem;
+}
+
+#quote-submission-form {
+    padding: 1.5rem; 
+    max-width: 320px; 
+    margin: 2rem auto; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+#quote-submission-form .form-group {
+    width: 100%; 
+    margin-bottom: 1rem;
+    text-align: center; 
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: center; 
+}
+
+.required {
+    color: #e76f51;
+}
+
+.form-help {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.3rem;
+    text-align: center;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%; 
+    max-width: 280px; 
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 1rem;
+    display: block; 
+    margin: 0 auto; 
+    text-align: left; 
+    text-align-last: initial; 
+}
+
+.form-group select {
+    text-align: center; 
+    text-align-last: center; 
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #e76f51;
+    box-shadow: 0 0 0 2px rgba(231, 111, 81, 0.2);
+}
+
+.submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: auto; 
+    display: block;
+    margin: 1rem auto 0; 
+}
+
+#form-message {
+    text-align: center; 
+    margin-top: 1rem;
+    font-weight: 600;
+    padding: 0.8rem;
+    border-radius: 5px;
+}
+
+#form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+#form-message.hidden {
+    display: none;
+}
+
+/* Success Page Styles */
+.success-main {
+    text-align: center;
+}
+
+.success-section {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 10px;
+}
+
+.success-message {
+    font-size: 1.1rem;
+    color: #155724;
+    margin-bottom: 1.5rem;
+}
+
+.submitted-data {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.quote-preview {
+    text-align: left;
+}
+
+.quote-preview blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.quote-preview .quote-author {
+    font-weight: 700;
+    color: #2a9d8f;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.quote-preview .quote-category,
+.quote-preview .quote-submitter,
+.quote-preview .submission-time {
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.next-steps {
+    text-align: left;
+    margin: 2rem auto;
+}
+
+.next-steps ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.next-steps li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.action-buttons .btn {
+    width: 80%;
+}
+
+/* References Page Styles */
+.references-main section {
+    text-align: center; 
+}
+
+.references-main p {
+    text-align: left; 
+}
+
+.references-main ul {
+    list-style: disc;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px; 
+    max-width: 90%; 
+    text-align: left; 
+}
+
+.references-main li {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.references-main h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2a9d8f;
+}
+
+/* Modal Styles for Mobile */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    max-height: 90vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    background-color: #2a9d8f;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-close:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-body blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 0 0 1rem 0;
+    color: #333;
+    text-align: center;
+}
+
+.modal-body p {
+    margin-bottom: 0.8rem;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.modal-actions .btn {
+    width: 80%;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2a9d8f; 
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0.3rem 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Lazy Loading Images */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}

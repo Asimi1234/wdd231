@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quote submission successful - Thank you for contributing to IzyQu QuoteGen's collection of inspirational quotes.">
+    <meta name="author" content="Israel Ayomikun Asimi">
+    <title>Quote Submitted Successfully - IzyQu QuoteGen</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png">
+    <link rel="stylesheet" href="styles/desktop.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/mobile.css" media="(max-width: 767px)">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <div class="header-content">
+            <img src="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png" 
+                 alt="IzyQu QuoteGen Logo" 
+                 class="logo"
+                 loading="lazy"
+                 data-src="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png">
+            <h1>IzyQu QuoteGen</h1>
+        </div>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quotes.html">Browse Quotes</a></li>
+                <li><a href="submit.html">Submit Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="success-main">
+        <section class="success-section">
+            <h2>🎉 Quote Submitted Successfully!</h2>
+            <p class="success-message">Thank you for contributing to our collection of inspirational quotes. Your submission has been received and is being reviewed.</p>
+            
+            <div class="submitted-data">
+                <h3>Your Submitted Quote:</h3>
+                <div class="quote-preview">
+                    <blockquote id="submitted-quote">"Loading your quote..."</blockquote>
+                    <p class="quote-author" id="submitted-author">- Loading author...</p>
+                    <p class="quote-category">Category: <span id="submitted-category">Loading...</span></p>
+                    <p class="quote-submitter">Submitted by: <span id="submitted-submitter">Loading...</span></p>
+                    <p class="submission-time">Submitted on: <span id="submission-timestamp">Loading...</span></p>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>What Happens Next?</h3>
+                <ul>
+                    <li>Our team will review your quote for quality and appropriateness</li>
+                    <li>If approved, your quote will be added to our collection</li>
+                    <li>You'll be credited as the contributor (if you provided your name)</li>
+                    <li>The quote will become available for others to discover and favorite</li>
+                </ul>
+            </div>
+
+            <div class="action-buttons">
+                <a href="submit.html" class="btn">Submit Another Quote</a>
+                <a href="quotes.html" class="btn">Browse Existing Quotes</a>
+                <a href="index.html" class="btn">Return to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Israel Ayomikun Asimi, Nigeria</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a> | <a href="#" id="video-demo-link">Video Demo</a></p>
+    </footer>
+
+    <script>
+        // Extract form data from URL parameters (for demonstration)
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Get submitted data from URL parameters or localStorage
+            const submittedQuote = urlParams.get('quoteText') || localStorage.getItem('lastSubmittedQuote') || 'Your inspirational quote';
+            const submittedAuthor = urlParams.get('quoteAuthor') || localStorage.getItem('lastSubmittedAuthor') || 'Unknown';
+            const submittedCategory = urlParams.get('quoteCategory') || localStorage.getItem('lastSubmittedCategory') || 'General';
+            const submittedSubmitter = urlParams.get('yourName') || localStorage.getItem('lastSubmittedSubmitter') || 'Anonymous';
+            
+            // Display the submitted data
+            document.getElementById('submitted-quote').textContent = `"${submittedQuote}"`;
+            document.getElementById('submitted-author').textContent = `- ${submittedAuthor}`;
+            document.getElementById('submitted-category').textContent = submittedCategory;
+            document.getElementById('submitted-submitter').textContent = submittedSubmitter;
+            document.getElementById('submission-timestamp').textContent = new Date().toLocaleDateString() + ' at ' + new Date().toLocaleTimeString();
+        });
+    </script>
+</body>
+</html>

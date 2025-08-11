@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Submit your inspirational quotes to IzyQu QuoteGen. Share wisdom and motivational quotes with our community of quote enthusiasts."
+    />
+    <meta name="author" content="Israel Ayomikun Asimi" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Submit Quote - IzyQu QuoteGen" />
+    <meta
+      property="og:description"
+      content="Have a quote that inspires you? Share it with the IzyQu QuoteGen community and help spread wisdom and motivation."
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png"
+    />
+    <meta property="og:url" content="https://yourdomain.com/submit.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Submit Quote - IzyQu QuoteGen" />
+    <meta
+      name="twitter:description"
+      content="Share inspirational quotes with our community. Submit your favorite wisdom and motivational quotes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png"
+    />
+
+    <title>IzyQu QuoteGen - Submit Your Quote</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/desktop.css"
+      media="(min-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/mobile.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <div class="header-content">
+        <img
+          src="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png"
+          alt="IzyQu QuoteGen Logo"
+          class="logo"
+          loading="lazy"
+          data-src="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png"
+        />
+        <h1>IzyQu QuoteGen</h1>
+      </div>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quotes.html">Browse Quotes</a></li>
+          <li>
+            <a href="submit.html" class="active" aria-current="page"
+              >Submit Quote</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="submit-main">
+      <section class="submit-form-section">
+        <h2>Share Your Wisdom</h2>
+        <p>
+          Have a quote that inspires you? Share it with the IzyQu QuoteGen
+          community! We review all submissions to ensure quality and relevance.
+        </p>
+
+        <form
+          id="quote-submission-form"
+          action="form-submit.html"
+          method="GET"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="quote-text-input"
+              >Quote Text:
+              <span class="required" aria-label="required">*</span></label
+            >
+            <textarea
+              id="quote-text-input"
+              name="quoteText"
+              rows="5"
+              required
+              aria-required="true"
+              aria-describedby="quote-text-help"
+              placeholder="Enter the full quote here..."
+            ></textarea>
+            <small id="quote-text-help" class="form-help"
+              >Enter the complete quote text as accurately as possible.</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="quote-author-input">Author (if known):</label>
+            <input
+              type="text"
+              id="quote-author-input"
+              name="quoteAuthor"
+              aria-describedby="author-help"
+              placeholder="e.g., Albert Einstein"
+            />
+            <small id="author-help" class="form-help"
+              >If you know who said this quote, please include their
+              name.</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="your-name-input">Your Name (optional):</label>
+            <input
+              type="text"
+              id="your-name-input"
+              name="yourName"
+              aria-describedby="name-help"
+              placeholder="Your name for attribution (optional)"
+            />
+            <small id="name-help" class="form-help"
+              >We'll credit you as the submitter if you'd like.</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="quote-category-input"
+              >Category:
+              <span class="required" aria-label="required">*</span></label
+            >
+            <select
+              id="quote-category-input"
+              name="quoteCategory"
+              required
+              aria-required="true"
+              aria-describedby="category-help"
+            >
+              <option value="">-- Select a Category --</option>
+              <option value="Inspiration">Inspiration</option>
+              <option value="Motivation">Motivation</option>
+              <option value="Wisdom">Wisdom</option>
+              <option value="Life">Life</option>
+              <option value="Success">Success</option>
+              <option value="Creativity">Creativity</option>
+              <option value="Happiness">Happiness</option>
+              <option value="Courage">Courage</option>
+              <option value="Knowledge">Knowledge</option>
+              <option value="Other">Other</option>
+            </select>
+            <small id="category-help" class="form-help"
+              >Choose the category that best fits your quote's theme.</small
+            >
+          </div>
+
+          <button type="submit" class="btn submit-btn">Submit Quote</button>
+          <p
+            id="form-message"
+            class="hidden"
+            role="alert"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div
+      id="submit-modal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="submit-modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="submit-modal-title">Confirm Submission</h3>
+          <button class="modal-close" aria-label="Close confirmation modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to submit this quote?</p>
+          <div id="preview-content">
+            <!-- Quote preview will be inserted here -->
+          </div>
+          <div class="modal-actions">
+            <button id="confirm-submit" class="btn">Yes, Submit</button>
+            <button
+              id="cancel-submit"
+              class="btn"
+              style="background-color: #666"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; <span id="currentyear"></span> Israel Ayomikun Asimi, Nigeria
+      </p>
+      <p id="lastModified"></p>
+      <p>
+        <a href="references.html">References</a> |
+        <a href="#" id="video-demo-link">Video Demo</a>
+      </p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("quote-submission-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          localStorage.setItem(
+            "lastSubmittedQuote",
+            document.getElementById("quote-text-input").value
+          );
+          localStorage.setItem(
+            "lastSubmittedAuthor",
+            document.getElementById("quote-author-input").value
+          );
+          localStorage.setItem(
+            "lastSubmittedCategory",
+            document.getElementById("quote-category-input").value
+          );
+          localStorage.setItem(
+            "lastSubmittedSubmitter",
+            document.getElementById("your-name-input").value
+          );
+
+          window.location.href = "form-submit.html";
+        });
+    </script>
+  </body>
+</html>

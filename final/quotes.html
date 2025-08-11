@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse inspirational quotes by category - Motivation, Wisdom, Life, Success, and more. Find your perfect quote and save your favorites.">
+    <meta name="author" content="Israel Ayomikun Asimi">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Browse Quotes - IzyQu QuoteGen">
+    <meta property="og:description" content="Explore our collection of inspirational quotes organized by category. Filter by Motivation, Wisdom, Life, Success, and more.">
+    <meta property="og:image" content="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png">
+    <meta property="og:url" content="https://yourdomain.com/quotes.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Browse Quotes - IzyQu QuoteGen">
+    <meta name="twitter:description" content="Explore our collection of inspirational quotes organized by category.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png">
+    
+    <title>IzyQu QuoteGen - Browse Quotes</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png">
+    <link rel="stylesheet" href="styles/desktop.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/mobile.css" media="(max-width: 767px)">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/quotesData.js" type="module" defer></script>
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <div class="header-content">
+            <img src="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png" 
+                 alt="IzyQu QuoteGen Logo" 
+                 class="logo"
+                 loading="lazy"
+                 data-src="https://res.cloudinary.com/dlytakuhd/image/upload/v1748332310/logo_z5esiq.png">
+            <h1>IzyQu QuoteGen</h1>
+        </div>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quotes.html" class="active" aria-current="page">Browse Quotes</a></li>
+                <li><a href="submit.html">Submit Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="browse-main">
+        <section class="browse-controls">
+            <h2>Browse Quotes by Category</h2>
+            <div class="category-filter">
+                <label for="category-select">Select Category:</label>
+                <select id="category-select" aria-label="Filter quotes by category">
+                    <option value="all">All Categories</option>
+                    <option value="Inspiration">Inspiration</option>
+                    <option value="Motivation">Motivation</option>
+                    <option value="Wisdom">Wisdom</option>
+                    <option value="Life">Life</option>
+                    <option value="Success">Success</option>
+                    <option value="Creativity">Creativity</option>
+                    <option value="Happiness">Happiness</option>
+                    <option value="Courage">Courage</option>
+                    <option value="Knowledge">Knowledge</option>
+                </select>
+            </div>
+            <div class="favorite-quotes-section">
+                <h3>Your Favorite Quotes</h3>
+                <div id="favorite-quotes-container" class="quotes-grid" role="region" aria-label="Your favorite quotes">
+                    <p class="no-favorites">No favorite quotes yet. Click the heart icon on a quote to add it!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-quotes-display">
+            <h2><span id="current-category-title">All</span> Quotes</h2>
+            <div id="quotes-container" class="quotes-grid" role="region" aria-label="Browse all quotes">
+                <!-- Quotes will be dynamically generated here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Dialog for Quote Details -->
+    <div id="quote-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Quote Details</h3>
+                <button class="modal-close" aria-label="Close quote details modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <blockquote id="modal-quote-text"></blockquote>
+                <p id="modal-quote-author"></p>
+                <p id="modal-quote-category"></p>
+                <p id="modal-quote-length"></p>
+                <p id="modal-quote-words"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Israel Ayomikun Asimi, Nigeria</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a> | <a href="#" id="video-demo-link">Video Demo</a></p>
+    </footer>
+</body>
+</html>

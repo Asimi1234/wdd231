@@ -1,6 +1,5 @@
-
-
-const allQuotes = [
+// quotesData.js - ES Module
+export const allQuotes = [
     {
         quote: "The only way to do great work is to love what you do.",
         author: "Steve Jobs",
@@ -103,3 +102,45 @@ const allQuotes = [
     }
 ];
 
+// External API integration function
+export async function fetchExternalQuotes() {
+  try {
+    const response = await fetch('https://dummyjson.com/quotes?limit=50');
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+    const data = await response.json();
+
+    const externalQuotes = data.quotes.map(item => ({
+      quote: item.quote,
+      author: item.author,
+      category: 'General'  
+    }));
+
+    return externalQuotes;
+  } catch (error) {
+    console.error('Error fetching quotes:', error);
+    return [];
+  }
+}
+
+
+function categorizeQuote(tags) {
+    const tagCategories = {
+        'inspirational': 'Inspiration',
+        'motivational': 'Motivation', 
+        'wisdom': 'Wisdom',
+        'success': 'Success',
+        'happiness': 'Happiness',
+        'life': 'Life',
+        'creativity': 'Creativity',
+        'courage': 'Courage',
+        'knowledge': 'Knowledge'
+    };
+
+    for (const tag of tags) {
+        if (tagCategories[tag.toLowerCase()]) {
+            return tagCategories[tag.toLowerCase()];
+        }
+    }
+    
+    return 'Inspiration';
+}
